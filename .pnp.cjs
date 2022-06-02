@@ -27,12 +27,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "front",\
         "reference": "workspace:package/front"\
+      },\
+      {\
+        "name": "@monorepo/user",\
+        "reference": "workspace:package/user"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
       ["@monorepo/common", ["workspace:package/common"]],\
+      ["@monorepo/user", ["workspace:package/user"]],\
       ["front", ["workspace:package/front"]],\
       ["practice_mono", ["workspace:."]]\
     ],\
@@ -563,6 +568,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./package/common/",\
           "packageDependencies": [\
             ["@monorepo/common", "workspace:package/common"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@monorepo/user", [\
+        ["workspace:package/user", {\
+          "packageLocation": "./package/user/",\
+          "packageDependencies": [\
+            ["@monorepo/user", "workspace:package/user"],\
+            ["@types/react", "npm:18.0.9"],\
+            ["@types/react-dom", "npm:18.0.5"],\
+            ["@vitejs/plugin-react", "npm:1.3.2"],\
+            ["react", "npm:18.1.0"],\
+            ["react-dom", "virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:18.1.0"],\
+            ["typescript", "patch:typescript@npm%3A4.7.2#~builtin<compat/typescript>::version=4.7.2&hash=7ad353"],\
+            ["vite", "virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:2.9.9"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1581,14 +1602,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./package/front/",\
           "packageDependencies": [\
             ["front", "workspace:package/front"],\
-            ["@monorepo/common", "workspace:package/common"],\
+            ["@monorepo/user", "workspace:package/user"],\
             ["@types/react", "npm:18.0.9"],\
             ["@types/react-dom", "npm:18.0.5"],\
             ["@vitejs/plugin-react", "npm:1.3.2"],\
             ["react", "npm:18.1.0"],\
-            ["react-dom", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:18.1.0"],\
+            ["react-dom", "virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:18.1.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.2#~builtin<compat/typescript>::version=4.7.2&hash=7ad353"],\
-            ["vite", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:2.9.9"]\
+            ["vite", "virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:2.9.9"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2462,10 +2483,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:18.1.0", {\
-          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-f270faae8b/0/cache/react-dom-npm-18.1.0-bd83695a9a-bb0d48eeb0.zip/node_modules/react-dom/",\
+        ["virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:18.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-0855624dde/0/cache/react-dom-npm-18.1.0-bd83695a9a-bb0d48eeb0.zip/node_modules/react-dom/",\
           "packageDependencies": [\
-            ["react-dom", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:18.1.0"],\
+            ["react-dom", "virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:18.1.0"],\
             ["@types/react", "npm:18.0.9"],\
             ["loose-envify", "npm:1.4.0"],\
             ["react", "npm:18.1.0"],\
@@ -2883,10 +2904,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:2.9.9", {\
-          "packageLocation": "./.yarn/__virtual__/vite-virtual-935e0b1ca8/0/cache/vite-npm-2.9.9-d1063e48c9-9292b8ba51.zip/node_modules/vite/",\
+        ["virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:2.9.9", {\
+          "packageLocation": "./.yarn/__virtual__/vite-virtual-e10dc86689/0/cache/vite-npm-2.9.9-d1063e48c9-9292b8ba51.zip/node_modules/vite/",\
           "packageDependencies": [\
-            ["vite", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:2.9.9"],\
+            ["vite", "virtual:805ba71c73a205d31bacf30acefd0a1d7fe20986a58ac56a05d88301fccb6de05267b9cbf64f0290c5134687e7d6a3e12c24a67b98caa177726b1df7c9713497#npm:2.9.9"],\
             ["@types/less", null],\
             ["@types/sass", null],\
             ["@types/stylus", null],\

@@ -1,14 +1,17 @@
 {
-  "name": "front",
+  "name": "@monorepo/user",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.tsx",
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@monorepo/user": "*",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
